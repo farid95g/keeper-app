@@ -11,6 +11,7 @@ html {
 body {
   background: #eee;
   padding: 0 16px;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
 }
 
 header {
@@ -18,6 +19,11 @@ header {
   margin: auto -16px;
   padding: 16px 32px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
 }
 
 header h1 {
@@ -26,8 +32,12 @@ header h1 {
   font-weight: 200;
 }
 
+header + div {
+  margin-top: 100px;
+}
+
 footer {
-  position: absolute;
+  position: fixed;
   text-align: center;
   bottom: 0;
   width: 100%;
@@ -48,6 +58,7 @@ div.notes {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  padding-bottom: 50px;
 }
 
 .note {
@@ -77,10 +88,11 @@ div.notes {
   margin-right: 10px;
   color: #f5ba13;
   border: none;
-  padding: 0 10px;
+  padding: 0 7px;
   height: 36px;
   cursor: pointer;
   outline: none;
+  border-radius: 50%;
 }
 
 form {
@@ -103,16 +115,14 @@ form textarea {
   resize: none;
 }
 form button {
-  position: absolute;
-  right: 18px;
-  bottom: -18px;
-  background: #f5ba13;
-  color: #fff;
+  position: absolute !important;
+  right: 18px !important;
+  bottom: -18px !important;
+  background: #f5ba13 !important;
+  color: #fff !important;
   border: none;
   border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  outline: none;
+  width: 36px !important;
+  height: 36px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
 }
